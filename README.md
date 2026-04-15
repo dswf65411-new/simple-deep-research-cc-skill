@@ -2,6 +2,8 @@
 
 給 [Claude Code](https://claude.com/claude-code) 使用的深度研究 slash command。
 
+Repo：<https://github.com/dswf65411-new/simple-deep-research-cc-skill>
+
 ## 特色
 
 - **4 條鐵律**：Sub agent 禁用 MCP／原文先行／數字溯源／溯源鏈完整
@@ -13,15 +15,29 @@
 
 ## 安裝
 
+**方式 A（git clone，推薦）：**
+
 ```bash
-tar -xzf research-skill-v5.0.tar.gz
-cd research-skill-package
+git clone https://github.com/dswf65411-new/simple-deep-research-cc-skill.git
+cd simple-deep-research-cc-skill
 ./install.sh
+```
+
+**方式 B（下載 zip）：** 按 GitHub 右上角綠色 `Code` → `Download ZIP`，解壓後 `./install.sh`。
+
+**方式 C（curl 單指令）：**
+
+```bash
+curl -sL https://github.com/dswf65411-new/simple-deep-research-cc-skill/archive/refs/heads/main.tar.gz | tar -xz \
+  && cd simple-deep-research-cc-skill-main \
+  && ./install.sh
 ```
 
 會安裝到：
 - `~/.claude/commands/research.md` — slash command 入口
 - `~/.claude/research-phases/` — Phase 指令檔與 reference
+
+若 `~/.claude/commands/research.md` 已存在，install.sh 會自動備份為 `research.md.bak.<timestamp>`。
 
 ## 使用
 
